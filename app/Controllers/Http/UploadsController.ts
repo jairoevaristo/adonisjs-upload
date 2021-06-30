@@ -15,13 +15,11 @@ export default class UploadsController {
       name: `${cuid()}-${Date.now()}.${imageFile.extname}`
     });
 
-    const imageLink = `/upload/${imageFile.fileName}`;
-
     const data = await Image.create({
       originalName: imageFile.clientName,
       name: imageFile.fileName,
       size: imageFile.size,
-      urlLink: imageLink
+      urlLink: `upload/${imageFile.fileName}`
     });
 
     return response.status(200).json(data);
