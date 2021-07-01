@@ -53,5 +53,5 @@ Rota responsável por realizar o upload. [POST]
 Rota responsável por listar e retornar dos os dados das imagens no banco de dados. [GET]
 
 ```bash
-  http://localhost:3333/api/v1/upload
+  http://localhost:3333/api/v1/
 ```
